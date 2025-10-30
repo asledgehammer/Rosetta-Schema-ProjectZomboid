@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/asledgehammer/Rosetta-Schema/main/1.2/game/projectzomboid.json",
+  "type": "object",
+  "minItems": 1,
+  "properties": {
+    "languages": {
+      "type": "object",
+      "properties": {
+        "java": {
+          "type": "object",
+          "properties": {
+            "methods": {
+              "type": "array",
+              "minItems": 1,
+              "additionalItems": false,
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/asledgehammer/Rosetta-Schema/main/1.2/java/method.json"
+              }
+            }
+          }
+        },
+        "lua": {
+          "type": "object",
+          "properties": {
+            "events": {
+              "type": "array",
+              "minItems": 1,
+              "additionalItems": false,
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/asledgehammer/Rosetta-Schema/main/1.2/game/projectzomboid/event.json"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
